@@ -12,169 +12,149 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LearnFast - Unlock Your Data Potential</title>
+    <title>LearnFast - Accelerate Your Data Analytics Journey</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8f8f8; /* Light background */
+            background-color: #f3f4f6; /* Light gray background */
+            color: #333; /* Dark text for contrast */
         }
-        /* Custom gradient for buttons/hero */
-        .btn-gradient {
-            background-image: linear-gradient(to right, #6366f1, #8b5cf6); /* Indigo to Violet */
-            transition: all 0.3s ease-in-out;
+        /* Custom gradient for hero button */
+        .gradient-button {
+            background-image: linear-gradient(to right, #4CAF50 0%, #2196F3 100%);
+            transition: all 0.3s ease;
         }
-        .btn-gradient:hover {
-            background-image: linear-gradient(to right, #8b5cf6, #6366f1); /* Reverse gradient on hover */
+        .gradient-button:hover {
+            background-position: right center;
             transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .shadow-custom {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
-<body class="text-gray-800">
+<body class="antialiased">
 
-    <!-- Header Section -->
-    <header class="bg-white shadow-sm py-4">
+    <!-- Header -->
+    <header class="bg-white shadow-md py-4">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="#" class="text-3xl font-extrabold text-indigo-700 rounded-lg p-2 hover:text-indigo-900 transition-colors">LearnFast</a>
+            <a href="#" class="text-3xl font-extrabold text-blue-600">LearnFast</a>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="#" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors rounded-md px-3 py-2">Home</a></li>
-                    <li><a href="courses.html" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors rounded-md px-3 py-2">Courses</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors rounded-md px-3 py-2">About Us</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors rounded-md px-3 py-2">Contact</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-600 transition duration-300">Home</a></li>
+                    <li><a href="#features" class="text-gray-700 hover:text-blue-600 transition duration-300">Features</a></li>
+                    <li><a href="#testimonials" class="text-gray-700 hover:text-blue-600 transition duration-300">Testimonials</a></li>
+                    <li><a href="#contact" class="text-gray-700 hover:text-blue-600 transition duration-300">Contact</a></li>
+                    <li><a href="course.html" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition duration-300">Courses</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-indigo-700 text-white py-20 px-4 md:py-32 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-indigo-800 to-purple-900 opacity-90"></div>
-        <div class="container mx-auto text-center relative z-10">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
-                Unlock Your Data Potential with <span class="text-purple-300">LearnFast</span>
+    <section class="relative bg-gradient-to-r from-blue-600 to-green-500 text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
+                Accelerate Your Data Analytics Journey
             </h1>
-            <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90 animate-fade-in-up delay-200">
-                Master the skills needed for the data-driven world with our expert-led, practical online courses.
+            <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90 animate-fade-in">
+                Unlock the power of data with our expert-led, hands-on courses. From beginner to advanced, LearnFast has you covered.
             </p>
-            <a href="courses.html" class="inline-block btn-gradient text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 animate-fade-in-up delay-400">
-                Explore Courses
+            <a href="course.html" class="inline-block px-8 py-4 text-lg font-semibold rounded-full shadow-lg gradient-button text-white transform hover:scale-105 transition duration-300 ease-in-out">
+                Explore Our Courses Now
             </a>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 px-4 bg-white">
-        <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Why Choose LearnFast?</h2>
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Why Choose LearnFast?</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
-                <div class="bg-gray-50 p-8 rounded-xl shadow-md text-center border border-indigo-100 hover:border-indigo-300 transition-all duration-300 transform hover:scale-105">
-                    <div class="text-indigo-600 mb-4 text-5xl">📊</div>
-                    <h3 class="text-xl font-semibold mb-3">Expert-Led Curriculum</h3>
-                    <p class="text-gray-600">Learn from industry veterans and data scientists with real-world experience and a passion for teaching.</p>
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center border-t-4 border-blue-500 hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-5xl text-blue-500 mb-4">💡</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Hands-On Learning</h3>
+                    <p class="text-gray-600">Practice with real-world datasets and projects to build practical skills.</p>
                 </div>
                 <!-- Feature 2 -->
-                <div class="bg-gray-50 p-8 rounded-xl shadow-md text-center border border-indigo-100 hover:border-indigo-300 transition-all duration-300 transform hover:scale-105">
-                    <div class="text-indigo-600 mb-4 text-5xl">💡</div>
-                    <h3 class="text-xl font-semibold mb-3">Hands-On Projects</h3>
-                    <p class="text-gray-600">Gain practical skills through real-world projects and case studies that prepare you for the job market.</p>
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center border-t-4 border-green-500 hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-5xl text-green-500 mb-4">👨‍🏫</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Expert Instructors</h3>
+                    <p class="text-gray-600">Learn from industry professionals with years of experience in data analytics.</p>
                 </div>
                 <!-- Feature 3 -->
-                <div class="bg-gray-50 p-8 rounded-xl shadow-md text-center border border-indigo-100 hover:border-indigo-300 transition-all duration-300 transform hover:scale-105">
-                    <div class="text-indigo-600 mb-4 text-5xl">🚀</div>
-                    <h3 class="text-xl font-semibold mb-3">Career Advancement</h3>
-                    <p class="text-gray-600">Access career support, interview prep, and a network that helps you land your dream data role.</p>
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center border-t-4 border-purple-500 hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-5xl text-purple-500 mb-4">📈</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Career-Focused Curriculum</h3>
+                    <p class="text-gray-600">Our courses are designed to align with current industry demands and job roles.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Course Categories Section -->
-    <section class="py-16 px-4 bg-gray-100">
-        <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Popular Course Categories</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Category 1 -->
-                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-                    <h3 class="text-2xl font-semibold text-indigo-700 mb-3">Data Science Fundamentals</h3>
-                    <p class="text-gray-600 mb-4">Start your journey with Python, R, statistics, and machine learning basics.</p>
-                    <a href="courses.html#data-science" class="text-indigo-600 hover:text-indigo-800 font-semibold flex items-center group">
-                        Learn More
-                        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </a>
-                </div>
-                <!-- Category 2 -->
-                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-                    <h3 class="text-2xl font-semibold text-indigo-700 mb-3">Business Analytics & BI</h3>
-                    <p class="text-gray-600 mb-4">Leverage data for strategic decision-making using SQL, Excel, and Power BI.</p>
-                    <a href="courses.html#business-analytics" class="text-indigo-600 hover:text-indigo-800 font-semibold flex items-center group">
-                        Learn More
-                        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </a>
-                </div>
-                <!-- Category 3 -->
-                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-                    <h3 class="text-2xl font-semibold text-indigo-700 mb-3">Big Data & Cloud</h3>
-                    <p class="text-gray-600 mb-4">Explore technologies like Hadoop, Spark, and cloud platforms (AWS, Azure, GCP).</p>
-                    <a href="courses.html#big-data" class="text-indigo-600 hover:text-indigo-800 font-semibold flex items-center group">
-                        Learn More
-                        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="py-16 px-4 bg-white">
-        <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">What Our Students Say</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Testimonial 1 -->
-                <div class="bg-indigo-50 p-6 rounded-xl shadow-md border border-indigo-200">
-                    <p class="text-gray-700 italic mb-4">"LearnFast transformed my career! The instructors are amazing, and the practical projects gave me the confidence I needed to land my first data analyst role."</p>
-                    <p class="font-semibold text-indigo-700">- Jane Doe, Data Analyst at TechCorp</p>
-                </div>
-                <!-- Testimonial 2 -->
-                <div class="bg-indigo-50 p-6 rounded-xl shadow-md border border-indigo-200">
-                    <p class="text-gray-700 italic mb-4">"The flexibility of LearnFast courses allowed me to upskill while working full-time. Highly recommend for anyone serious about a data career!"</p>
-                    <p class="font-semibold text-indigo-700">- John Smith, Business Intelligence Specialist</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action Footer Section -->
-    <section class="bg-indigo-700 text-white py-16 px-4 text-center">
-        <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Data Journey?</h2>
-            <p class="text-lg mb-8 opacity-90">Join thousands of successful students and accelerate your data career today.</p>
-            <a href="courses.html" class="inline-block btn-gradient text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
-                Enroll Now
+    <!-- Call to Action Section (Secondary) -->
+    <section class="bg-gray-800 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Career?</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">
+                Join thousands of successful students who have launched their data analytics careers with LearnFast.
+            </p>
+            <a href="course.html" class="inline-block px-8 py-4 text-lg font-semibold rounded-full bg-indigo-500 text-white shadow-lg hover:bg-indigo-600 transition-colors duration-300">
+                View All Courses
             </a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300 py-8 px-4">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-            <p class="mb-4 md:mb-0">&copy; 2025 LearnFast. All rights reserved.</p>
-            <div class="flex space-x-6">
-                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-                <a href="#" class="hover:text-white transition-colors">FAQ</a>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-f3f4f6">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">What Our Students Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/100x100/A0DAFB/2196F3?text=JS" alt="Student Avatar" class="w-24 h-24 rounded-full mb-4 object-cover border-4 border-blue-200">
+                    <p class="text-gray-700 italic mb-4">"LearnFast transformed my understanding of data. The instructors are amazing and the practical exercises were invaluable!"</p>
+                    <p class="font-semibold text-gray-900">- Jane Smith, Data Analyst</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/100x100/FDC187/E65100?text=AM" alt="Student Avatar" class="w-24 h-24 rounded-full mb-4 object-cover border-4 border-orange-200">
+                    <p class="text-gray-700 italic mb-4">"I landed my dream job thanks to the comprehensive curriculum at LearnFast. Highly recommend for anyone serious about data!"</p>
+                    <p class="font-semibold text-gray-900">- Alex Miller, Business Intelligence Specialist</p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/100x100/B2EBF2/00BCD4?text=SK" alt="Student Avatar" class="w-24 h-24 rounded-full mb-4 object-cover border-4 border-cyan-200">
+                    <p class="text-gray-700 italic mb-4">"The flexibility of LearnFast courses allowed me to learn at my own pace while still getting expert guidance."</p>
+                    <p class="font-semibold text-gray-900">- Sarah Khan, Marketing Analyst</p>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold mb-4">Connect with LearnFast</h3>
+            <p class="mb-4">Email: info@learnfast.com | Phone: +1 (555) 123-4567</p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                    <!-- Example social icon (replace with actual SVG/Font Awesome if preferred) -->
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.356-.012-.534A8.32 8.32 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.11 4.11 0 001.804-2.27 8.22 8.22 0 01-2.605.996 4.1 4.1 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.1 4.1 0 001.27 5.477A4.073 4.073 0 01.8 10.45c-.004.05-.004.099-.004.149a4.1 4.1 0 003.29 4.024 4.085 4.085 0 01-1.853.07 4.106 4.106 0 003.834 2.85A8.217 8.217 0 010 18.006 11.667 11.667 0 006.29 20.25c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.356-.012-.534A8.32 8.32 0 0022 5.92a8.19 8.19 0 01-2.357.646z"></path></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22H12c5.523 0 10-4.477 10-10z" clip-rule="evenodd"></path></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.863 8.16 6.84 9.5a.75.75 0 00.72-.53l.8-4.52a.75.75 0 00-.22-.64l-2.7-2.7a.75.75 0 01-.13-.88l1.45-2.9a.75.75 0 01.69-.44h5.5c.38 0 .7.26.74.63l1.45 2.9a.75.75 0 01-.13.88l-2.7 2.7a.75.75 0 00-.22.64l.8 4.52a.75.75 0 00.72.53C19.137 20.16 22 16.42 22 12c0-5.523-4.477-10-10-10zM9.5 13.5a1 1 0 100-2 1 1 0 000 2zm5-1a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <p>&copy; 2024 LearnFast. All rights reserved.</p>
         </div>
     </footer>
 
 </body>
 </html>
-
