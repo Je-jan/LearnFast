@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-04XWMNF12D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-04XWMNF12D');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnFast - Our Courses</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+            color: #333; /* Dark text for contrast */
+        }
+        /* Custom gradient for buttons, consistent with landing page */
+        .gradient-button {
+            background-image: linear-gradient(to right, #4CAF50 0%, #2196F3 100%);
+            transition: all 0.3s ease;
+        }
+        .gradient-button:hover {
+            background-position: right center;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header (consistent with landing page) -->
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-extrabold text-blue-600">LearnFast</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Home</a></li>
+                    <li><a href="index.html#features" class="text-gray-700 hover:text-blue-600 transition duration-300">Features</a></li>
+                    <li><a href="index.html#testimonials" class="text-gray-700 hover:text-blue-600 transition duration-300">Testimonials</a></li>
+                    <li><a href="index.html#contact" class="text-gray-700 hover:text-blue-600 transition duration-300">Contact</a></li>
+                    <li><a href="course.html" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition duration-300">Courses</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Courses Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-gray-800">Our Data Analytics Courses</h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course Card 1: Data Analytics Fundamentals -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/600x300/4299E1/ffffff?text=Fundamentals" alt="Course Image" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900">Data Analytics Fundamentals</h2>
+                        <p class="text-gray-600 mb-4 flex-grow">
+                            Start your journey into the world of data. Learn essential concepts, tools, and methodologies for basic data analysis. Perfect for beginners.
+                        </p>
+                        <ul class="text-gray-700 text-sm mb-4 list-disc list-inside">
+                            <li>Introduction to Data</li>
+                            <li>Excel for Data Analysis</li>
+                            <li>Basic Statistics</li>
+                            <li>Data Visualization with Tableau/Power BI</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="register.html" class="block w-full text-center px-6 py-3 font-semibold rounded-lg gradient-button text-white hover:scale-105 transition duration-300 ease-in-out">
+                            Enroll Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Course Card 2: Python for Data Science -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/600x300/48BB78/ffffff?text=Python+for+Data+Science" alt="Course Image" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900">Python for Data Science</h2>
+                        <p class="text-gray-600 mb-4 flex-grow">
+                            Master Python for data manipulation, analysis, and machine learning. Dive deep into libraries like Pandas, NumPy, and Scikit-learn.
+                        </p>
+                        <ul class="text-gray-700 text-sm mb-4 list-disc list-inside">
+                            <li>Python Basics for Data</li>
+                            <li>Pandas & NumPy</li>
+                            <li>Data Cleaning & Preprocessing</li>
+                            <li>Introduction to Machine Learning</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="register.html" class="block w-full text-center px-6 py-3 font-semibold rounded-lg gradient-button text-white hover:scale-105 transition duration-300 ease-in-out">
+                            Enroll Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Course Card 3: SQL for Data Analysts -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/600x300/667EEA/ffffff?text=SQL+for+Analysts" alt="Course Image" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900">SQL for Data Analysts</h2>
+                        <p class="text-gray-600 mb-4 flex-grow">
+                            Become proficient in SQL for querying databases, extracting insights, and managing data. Essential for any data professional.
+                        </p>
+                        <ul class="text-gray-700 text-sm mb-4 list-disc list-inside">
+                            <li>SQL Fundamentals</li>
+                            <li>Advanced SQL Queries</li>
+                            <li>Database Joins & Subqueries</li>
+                            <li>Data Warehousing Concepts</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="register.html" class="block w-full text-center px-6 py-3 font-semibold rounded-lg gradient-button text-white hover:scale-105 transition duration-300 ease-in-out">
+                            Enroll Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Course Card 4: Advanced Machine Learning -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/600x300/ED8936/ffffff?text=Advanced+ML" alt="Course Image" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900">Advanced Machine Learning</h2>
+                        <p class="text-gray-600 mb-4 flex-grow">
+                            Explore complex ML algorithms, deep learning, and advanced model deployment techniques. For experienced data professionals.
+                        </p>
+                        <ul class="text-gray-700 text-sm mb-4 list-disc list-inside">
+                            <li>Deep Learning with TensorFlow/PyTorch</li>
+                            <li>Natural Language Processing (NLP)</li>
+                            <li>Computer Vision</li>
+                            <li>Model Deployment & MLOps</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="register.html" class="block w-full text-center px-6 py-3 font-semibold rounded-lg gradient-button text-white hover:scale-105 transition duration-300 ease-in-out">
+                            Enroll Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Course Card 5: Data Visualization & Storytelling -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/600x300/9F7AEA/ffffff?text=Data+Viz" alt="Course Image" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900">Data Visualization & Storytelling</h2>
+                        <p class="text-gray-600 mb-4 flex-grow">
+                            Learn to create compelling visualizations and communicate data insights effectively using various tools.
+                        </p>
+                        <ul class="text-gray-700 text-sm mb-4 list-disc list-inside">
+                            <li>Principles of Data Visualization</li>
+                            <li>Advanced Tableau Techniques</li>
+                            <li>Storytelling with Data</li>
+                            <li>Interactive Dashboards</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="register.html" class="block w-full text-center px-6 py-3 font-semibold rounded-lg gradient-button text-white hover:scale-105 transition duration-300 ease-in-out">
+                            Enroll Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Course Card 6: Big Data Technologies -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/600x300/4299E1/ffffff?text=Big+Data" alt="Course Image" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow">
+                        <h2 class="text-2xl font-bold mb-2 text-gray-900">Big Data Technologies</h2>
+                        <p class="text-gray-600 mb-4 flex-grow">
+                            Get hands-on with Hadoop, Spark, and other big data frameworks to process and analyze massive datasets.
+                        </p>
+                        <ul class="text-gray-700 text-sm mb-4 list-disc list-inside">
+                            <li>Introduction to Big Data</li>
+                            <li>Hadoop & HDFS</li>
+                            <li>Apache Spark</li>
+                            <li>NoSQL Databases</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="register.html" class="block w-full text-center px-6 py-3 font-semibold rounded-lg gradient-button text-white hover:scale-105 transition duration-300 ease-in-out">
+                            Enroll Now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (consistent with landing page) -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold mb-4">Connect with LearnFast</h3>
+            <p class="mb-4">Email: info@learnfast.com | Phone: +1 (555) 123-4567</p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.356-.012-.534A8.32 8.32 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.11 4.11 0 001.804-2.27 8.22 8.22 0 01-2.605.996 4.1 4.1 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.1 4.1 0 001.27 5.477A4.073 4.073 0 01.8 10.45c-.004.05-.004.099-.004.149a4.1 4.1 0 003.29 4.024 4.085 4.085 0 01-1.853.07 4.106 4.106 0 003.834 2.85A8.217 8.217 0 010 18.006 11.667 11.667 0 006.29 20.25c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.356-.012-.534A8.32 8.32 0 0022 5.92a8.19 8.19 0 01-2.357.646z"></path></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22H12c5.523 0 10-4.477 10-10z" clip-rule="evenodd"></path></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.863 8.16 6.84 9.5a.75.75 0 00.72-.53l.8-4.52a.75.75 0 00-.22-.64l-2.7-2.7a.75.75 0 01-.13-.88l1.45-2.9a.75.75 0 01.69-.44h5.5c.38 0 .7.26.74.63l1.45 2.9a.75.75 0 01-.13.88l-2.7 2.7a.75.75 0 00-.22.64l.8 4.52a.75.75 0 00.72.53C19.137 20.16 22 16.42 22 12c0-5.523-4.477-10-10-10zM9.5 13.5a1 1 0 100-2 1 1 0 000 2zm5-1a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <p>&copy; 2024 LearnFast. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
