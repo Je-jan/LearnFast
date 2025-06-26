@@ -43,7 +43,7 @@
                 <ul class="flex space-x-6">
                     <li><a href="index.html" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors rounded-md px-3 py-2">Home</a></li>
                     <li><a href="courses.html" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors rounded-md px-3 py-2">Courses</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors rounded-md px-3 py-2">About Us</a></li>
+                    <li><a href="about.html" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors rounded-md px-3 py-2">About Us</a></li>
                     <li><a href="#" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors rounded-md px-3 py-2">Contact</a></li>
                 </ul>
             </nav>
@@ -56,7 +56,7 @@
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-indigo-700">Register for LearnFast</h2>
             <p class="text-center text-gray-600 mb-6">Create your account to start your data analytics journey!</p>
 
-            <form class="space-y-6">
+            <form id="registrationForm" class="space-y-6">
                 <div>
                     <label for="full-name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
                     <input type="text" id="full-name" name="full-name" placeholder="John Doe"
@@ -81,8 +81,6 @@
                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out"
                            required>
                 </div>
-                <!-- Optional: Course selection if coming directly from a course -->
-                <!-- <input type="hidden" id="course-id" name="course-id" value=""> -->
                 
                 <button type="submit" class="w-full btn-gradient text-white font-bold py-3 rounded-full text-lg shadow-md hover:shadow-lg transition duration-300">
                     Create Account
@@ -107,6 +105,30 @@
         </div>
     </footer>
 
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Basic validation
+            const fullName = document.getElementById('full-name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (fullName === '' || email === '' || password === '' || confirmPassword === '') {
+                console.error('Please fill in all fields.'); // Using console.error for non-alert feedback
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                console.error('Passwords do not match.'); // Using console.error for non-alert feedback
+                return;
+            }
+
+            // If validation passes, redirect to the confirmation page
+            window.location.href = 'confirmation.html';
+        });
+    </script>
 </body>
 </html>
 
