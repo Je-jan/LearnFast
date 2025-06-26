@@ -15,179 +15,207 @@
     <title>LearnFast - Our Courses</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Light gray background */
+            background-color: #f8f8f8; /* Light background */
         }
-        .hero-section {
-            background: linear-gradient(135deg, #4c51bf, #6b46c1); /* Purple gradient */
-            color: white;
+        /* Custom gradient for buttons */
+        .btn-gradient {
+            background-image: linear-gradient(to right, #6366f1, #8b5cf6); /* Indigo to Violet */
+            transition: all 0.3s ease-in-out;
         }
-        .btn-primary {
-            background-color: #6b46c1; /* Purple */
-            transition: background-color 0.3s ease;
+        .btn-gradient:hover {
+            background-image: linear-gradient(to right, #8b5cf6, #6366f1); /* Reverse gradient on hover */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        .btn-primary:hover {
-            background-color: #5a3ba0; /* Darker purple on hover */
-        }
-        .card {
-            background-color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
+        .shadow-custom {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
     </style>
 </head>
-<body class="antialiased">
-    <!-- Header/Navbar -->
+<body class="text-gray-800">
+
+    <!-- Header Section -->
     <header class="bg-white shadow-sm py-4">
-        <nav class="container mx-auto px-4 flex justify-between items-center">
-            <a href="register.html" class="text-2xl font-bold text-gray-800 rounded-md p-2">LearnFast</a>
-            <ul class="hidden md:flex space-x-6">
-                <li><a href="register.html#features" class="text-gray-600 hover:text-purple-600 font-medium rounded-md p-2">Features</a></li>
-                <li><a href="#courses" class="text-purple-600 font-medium rounded-md p-2">Courses</a></li>
-                <li><a href="register.html#testimonials" class="text-gray-600 hover:text-purple-600 font-medium rounded-md p-2">Testimonials</a></li>
-                <li><a href="register.html#cta" class="text-gray-600 hover:text-purple-600 font-medium rounded-md p-2">Contact</a></li>
-                <li><a href="#" class="text-white bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-md font-medium transition-colors duration-300">Sign Up</a></li>
-            </ul>
-            <!-- Mobile Menu Button - (You would add JS to toggle a mobile menu here) -->
-            <button class="md:hidden text-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-md p-2">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </nav>
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-extrabold text-indigo-700 rounded-lg p-2 hover:text-indigo-900 transition-colors">LearnFast</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors rounded-md px-3 py-2">Home</a></li>
+                    <li><a href="#" class="text-indigo-700 font-medium transition-colors rounded-md px-3 py-2">Courses</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors rounded-md px-3 py-2">About Us</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors rounded-md px-3 py-2">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Hero Section for Courses Page -->
-    <section class="hero-section py-20 md:py-32 text-center rounded-b-lg">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 rounded-md p-2">
-                Discover All Our Data Analytics Courses
+    <!-- Courses Hero Section -->
+    <section class="bg-indigo-600 text-white py-16 px-4 md:py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-700 to-purple-800 opacity-90"></div>
+        <div class="container mx-auto text-center relative z-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 animate-fade-in-up">
+                Discover Our Data Analytics Courses
             </h1>
-            <p class="text-lg md:text-xl mb-8 opacity-90 rounded-md p-2">
-                Browse our comprehensive catalog of courses designed for all skill levels, from beginners to advanced practitioners.
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90 animate-fade-in-up delay-200">
+                Choose from a wide range of courses designed to help you master data science, business intelligence, and big data technologies.
             </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <input type="text" placeholder="Search courses..." class="px-5 py-3 rounded-full shadow-md w-full md:w-auto focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-800">
-                <button class="btn-primary inline-block text-white font-semibold py-3 px-8 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
-                    Search
-                </button>
+            <div class="relative w-full max-w-md mx-auto">
+                <input type="text" placeholder="Search courses..." class="w-full py-3 pl-12 pr-4 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400 shadow-md">
+                <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             </div>
         </div>
     </section>
 
-    <!-- All Courses Section -->
-    <section id="courses" class="py-16 md:py-24">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 rounded-md p-2">Our Full Course Catalog</h2>
+    <!-- Course Listing Section -->
+    <section class="py-16 px-4 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">All Courses</h2>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Course Card 1 -->
-                <div class="card rounded-lg overflow-hidden">
-                    <img src="https://placehold.co/600x350/E0F2F7/4C51BF?text=Data+Science+Basics" alt="Data Science Basics" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Data Science Fundamentals</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Master the core concepts of data science, from statistics to Python programming. Includes data cleaning, visualization, and basic modeling.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-lg font-bold text-purple-700">$499</span>
-                            <a href="#" class="bg-purple-100 text-purple-700 hover:bg-purple-200 text-sm font-medium px-4 py-2 rounded-full transition-colors duration-300">Enroll Now</a>
-                        </div>
+                <!-- Course Card 1: Data Science Fundamentals -->
+                <div id="data-science" class="bg-white p-6 rounded-xl shadow-md border border-gray-200 flex flex-col hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/DDE0FE/6366F1?text=Data+Science" alt="Data Science Course" class="rounded-lg mb-4 w-full h-40 object-cover">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Data Science Fundamentals</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">A comprehensive introduction to Python, R, statistics, and machine learning algorithms. Perfect for beginners.</p>
+                    <ul class="text-gray-700 text-sm mb-4 list-disc list-inside">
+                        <li>Python & R Programming</li>
+                        <li>Statistical Analysis</li>
+                        <li>Machine Learning Basics</li>
+                        <li>Data Visualization</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <span class="text-xl font-bold text-indigo-800 block mb-4">$499</span>
+                        <button class="inline-block btn-gradient text-white font-bold py-3 px-6 rounded-full text-md shadow-md hover:shadow-lg transition duration-300">
+                            Register Now
+                        </button>
                     </div>
                 </div>
-                <!-- Course Card 2 -->
-                <div class="card rounded-lg overflow-hidden">
-                    <img src="https://placehold.co/600x350/E0F2F7/4C51BF?text=SQL+for+Analytics" alt="SQL for Data Analytics" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">SQL for Data Analytics</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Become proficient in SQL for data extraction, manipulation, and analysis. Learn advanced queries, joins, and database management.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-lg font-bold text-purple-700">$349</span>
-                            <a href="#" class="bg-purple-100 text-purple-700 hover:bg-purple-200 text-sm font-medium px-4 py-2 rounded-full transition-colors duration-300">Enroll Now</a>
-                        </div>
+
+                <!-- Course Card 2: Business Analytics & BI -->
+                <div id="business-analytics" class="bg-white p-6 rounded-xl shadow-md border border-gray-200 flex flex-col hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/DDE0FE/6366F1?text=Business+BI" alt="Business Analytics Course" class="rounded-lg mb-4 w-full h-40 object-cover">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Business Analytics & BI</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">Learn to transform raw data into actionable business insights using SQL, Excel, and leading BI tools.</p>
+                    <ul class="text-gray-700 text-sm mb-4 list-disc list-inside">
+                        <li>SQL for Data Analysis</li>
+                        <li>Advanced Excel Techniques</li>
+                        <li>Power BI & Tableau</li>
+                        <li>Data Storytelling</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <span class="text-xl font-bold text-indigo-800 block mb-4">$399</span>
+                        <button class="inline-block btn-gradient text-white font-bold py-3 px-6 rounded-full text-md shadow-md hover:shadow-lg transition duration-300">
+                            Register Now
+                        </button>
                     </div>
                 </div>
-                <!-- Course Card 3 -->
-                <div class="card rounded-lg overflow-hidden">
-                    <img src="https://placehold.co/600x350/E0F2F7/4C51BF?text=Machine+Learning" alt="Machine Learning for Business" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Machine Learning for Business</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Implement machine learning models to solve real-world business problems. Covers supervised and unsupervised learning.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-lg font-bold text-purple-700">$599</span>
-                            <a href="#" class="bg-purple-100 text-purple-700 hover:bg-purple-200 text-sm font-medium px-4 py-2 rounded-full transition-colors duration-300">Enroll Now</a>
-                        </div>
+
+                <!-- Course Card 3: Big Data & Cloud -->
+                <div id="big-data" class="bg-white p-6 rounded-xl shadow-md border border-gray-200 flex flex-col hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/DDE0FE/6366F1?text=Big+Data" alt="Big Data Course" class="rounded-lg mb-4 w-full h-40 object-cover">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Big Data & Cloud Technologies</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">Dive into distributed data processing with Hadoop, Spark, and learn to deploy solutions on cloud platforms.</p>
+                    <ul class="text-gray-700 text-sm mb-4 list-disc list-inside">
+                        <li>Hadoop & Spark Ecosystem</li>
+                        <li>Cloud Data Solutions (AWS/Azure/GCP)</li>
+                        <li>NoSQL Databases</li>
+                        <li>Real-time Data Processing</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <span class="text-xl font-bold text-indigo-800 block mb-4">$599</span>
+                        <button class="inline-block btn-gradient text-white font-bold py-3 px-6 rounded-full text-md shadow-md hover:shadow-lg transition duration-300">
+                            Register Now
+                        </button>
                     </div>
                 </div>
-                <!-- Course Card 4 -->
-                <div class="card rounded-lg overflow-hidden">
-                    <img src="https://placehold.co/600x350/E0F2F7/4C51BF?text=Data+Visualization" alt="Data Visualization with Tableau" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Data Visualization with Tableau</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Create compelling dashboards and reports using Tableau. Learn best practices for visual storytelling.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-lg font-bold text-purple-700">$399</span>
-                            <a href="#" class="bg-purple-100 text-purple-700 hover:bg-purple-200 text-sm font-medium px-4 py-2 rounded-full transition-colors duration-300">Enroll Now</a>
-                        </div>
+
+                <!-- Course Card 4: SQL for Data Mastery -->
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 flex flex-col hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/DDE0FE/6366F1?text=SQL+Mastery" alt="SQL Mastery Course" class="rounded-lg mb-4 w-full h-40 object-cover">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">SQL for Data Mastery</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">Master SQL from beginner to advanced levels, crucial for any data professional.</p>
+                    <ul class="text-gray-700 text-sm mb-4 list-disc list-inside">
+                        <li>Database Fundamentals</li>
+                        <li>Complex Queries & Joins</li>
+                        <li>Window Functions</li>
+                        <li>Performance Tuning</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <span class="text-xl font-bold text-indigo-800 block mb-4">$299</span>
+                        <button class="inline-block btn-gradient text-white font-bold py-3 px-6 rounded-full text-md shadow-md hover:shadow-lg transition duration-300">
+                            Register Now
+                        </button>
                     </div>
                 </div>
-                <!-- Course Card 5 -->
-                <div class="card rounded-lg overflow-hidden">
-                    <img src="https://placehold.co/600x350/E0F2F7/4C51BF?text=Python+for+Data" alt="Python for Data Analysis" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Python for Data Analysis</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Master Python libraries like Pandas, NumPy, and Matplotlib for powerful data manipulation and analysis.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-lg font-bold text-purple-700">$449</span>
-                            <a href="#" class="bg-purple-100 text-purple-700 hover:bg-purple-200 text-sm font-medium px-4 py-2 rounded-full transition-colors duration-300">Enroll Now</a>
-                        </div>
+
+                <!-- Course Card 5: Advanced Data Visualization -->
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 flex flex-col hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/DDE0FE/6366F1?text=Data+Viz" alt="Data Visualization Course" class="rounded-lg mb-4 w-full h-40 object-cover">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Advanced Data Visualization</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">Create compelling and insightful data visualizations with Tableau, Power BI, and D3.js.</p>
+                    <ul class="text-gray-700 text-sm mb-4 list-disc list-inside">
+                        <li>Dashboard Design Principles</li>
+                        <li>Tableau & Power BI Advanced</li>
+                        <li>D3.js for Web Viz</li>
+                        <li>Storytelling with Data</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <span class="text-xl font-bold text-indigo-800 block mb-4">$449</span>
+                        <button class="inline-block btn-gradient text-white font-bold py-3 px-6 rounded-full text-md shadow-md hover:shadow-lg transition duration-300">
+                            Register Now
+                        </button>
                     </div>
                 </div>
-                <!-- Course Card 6 -->
-                <div class="card rounded-lg overflow-hidden">
-                    <img src="https://placehold.co/600x350/E0F2F7/4C51BF?text=Big+Data+Fundamentals" alt="Big Data Fundamentals" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Big Data Fundamentals</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Explore foundational concepts of Big Data, including Hadoop, Spark, and distributed computing.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-lg font-bold text-purple-700">$699</span>
-                            <a href="#" class="bg-purple-100 text-purple-700 hover:bg-purple-200 text-sm font-medium px-4 py-2 rounded-full transition-colors duration-300">Enroll Now</a>
-                        </div>
+
+                <!-- Course Card 6: Machine Learning Engineering -->
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 flex flex-col hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/DDE0FE/6366F1?text=ML+Eng" alt="Machine Learning Engineering Course" class="rounded-lg mb-4 w-full h-40 object-cover">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Machine Learning Engineering</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">Build, deploy, and manage machine learning models in production environments.</p>
+                    <ul class="text-gray-700 text-sm mb-4 list-disc list-inside">
+                        <li>MLOps & Deployment</li>
+                        <li>Model Monitoring</li>
+                        <li>Cloud ML Services</li>
+                        <li>Scalable ML Pipelines</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <span class="text-xl font-bold text-indigo-800 block mb-4">$649</span>
+                        <button class="inline-block btn-gradient text-white font-bold py-3 px-6 rounded-full text-md shadow-md hover:shadow-lg transition duration-300">
+                            Register Now
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action Section - repeated from landing page for consistency -->
-    <section id="cta" class="py-16 md:py-24 hero-section text-center rounded-t-lg">
-        <div class="container mx-auto px-4 max-w-3xl">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 rounded-md p-2">Ready to Start Your Data Journey?</h2>
-            <p class="text-lg md:text-xl mb-8 opacity-90 rounded-md p-2">
-                Join thousands of aspiring data professionals who are building their skills with LearnFast.
-            </p>
-            <a href="#" class="inline-block bg-white text-purple-600 hover:bg-purple-100 font-semibold py-3 px-8 rounded-full shadow-lg transition-colors duration-300">
-                Get Started Today
+    <!-- Call to Action Footer Section (Courses Page Specific) -->
+    <section class="bg-indigo-700 text-white py-16 px-4 text-center">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Can't find what you're looking for?</h2>
+            <p class="text-lg mb-8 opacity-90">Contact our advisors to discuss your learning path and career goals.</p>
+            <a href="#" class="inline-block btn-gradient text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+                Get Personalized Advice
             </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4 text-center text-sm">
-            <p>&copy; 2025 LearnFast. All rights reserved.</p>
-            <div class="mt-4 space-x-4">
-                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Privacy Policy</a>
-                <span class="text-gray-600">|</span>
-                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Terms of Service</a>
-                <span class="text-gray-600">|</span>
-                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Contact Us</a>
+    <footer class="bg-gray-800 text-gray-300 py-8 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <p class="mb-4 md:mb-0">&copy; 2025 LearnFast. All rights reserved.</p>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-white transition-colors">FAQ</a>
             </div>
         </div>
     </footer>
+
 </body>
 </html>
-
